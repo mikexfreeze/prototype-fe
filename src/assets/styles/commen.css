@@ -1,0 +1,40 @@
+/*reset css*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+h1, h2, h3, h4, h5, p, a, span{
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+h1, h2, h3, h4, h5{
+    font-weight: 400;
+}
+
+/*flex layout*/
+.flex{display: flex}
+.all-center{align-items: center;justify-content: center}
+
+/*iconfont*/
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/*common css*/
+
+
+.mt-10 {
+    margin-top: 10px
+}
+
+.h100 {
+    height: 100%
+}
+
+.t-center{text-align: center}
+
+
+    
