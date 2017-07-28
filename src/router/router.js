@@ -17,6 +17,7 @@ import Register from '../views/register';
 
 // dashboard
 const dashboard = resolve => require(['../views/dashboard/index.vue'], resolve);
+const tags = resolve => require(['../views/tags/tags.vue'], resolve);
 
 /* error page*/
 const Err404 = resolve => require(['../views/error/404'], resolve);
@@ -38,6 +39,13 @@ export default new Router({
             name: '首页',
             hidden: true,
             children: [{path: 'dashboard', component: dashboard}]
+        },
+        {
+            path: '/tags',
+            component: Layout,
+            name: '标签',
+            hidden: true,
+            children: [{path: 'tags', component: tags}]
         }
 
 

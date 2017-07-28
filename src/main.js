@@ -7,7 +7,8 @@ import 'assets/iconfont/iconfont'; // iconfont
 // import 'components/Icon-svg/index'; // 封装的svg组件
 import './directives'; // 自定义指令
 import 'components'; // 自定义全局组件
-
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Vue from 'vue'
 import ElementUI from 'element-ui';
 

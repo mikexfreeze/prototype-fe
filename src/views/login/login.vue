@@ -29,7 +29,7 @@
             </el-input>
         </el-form-item>
         <el-form-item class="flex all-center">
-            <el-button type="primary" @click="onSubmit">登录</el-button>
+            <el-button type="primary" @keyup.enter="onSubmit" @click="onSubmit">登录</el-button>
             <el-button>注册</el-button>
         </el-form-item>
     </el-form>
@@ -47,11 +47,12 @@
             onSubmit() {
                 this.$store.dispatch('LoginByEmail', this.login)
                     .then(()=>{
-                        Message({
+                        this.$message({
                             message: "登录成功",
                             type: 'success',
                             duration: 10 * 1000
                         })
+                        this.$router.push({path: '/'})
                     })
 //                console.log('submit!');
             }

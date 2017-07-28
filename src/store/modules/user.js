@@ -68,11 +68,11 @@ const user = {
       return new Promise((resolve, reject) => {
         loginByEmail(username, userInfo.password)
           .then(response => {
-            console.log("登录接口返回信息")
+            console.log("登录接口")
             console.log(response)
             const data = response.data;
-            Cookies.set('X-Ivanka-Token',  'Bearer ' + data.token);
-            commit('SET_TOKEN', 'Bearer ' + data.token);
+            // Cookies.set('X-Ivanka-Token',  'Bearer ' + data.token);
+            // commit('SET_TOKEN', 'Bearer ' + data.token);
             // commit('SET_EMAIL', email);
             resolve();
           });

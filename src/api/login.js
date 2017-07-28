@@ -4,19 +4,22 @@ import {Message} from 'element-ui';
 
 export function loginByEmail(username, password) {
 
-    const masterToken = "access_token=3U9XCZRPLseYdhm4rUf7eztsqtcctLkX";
+    // const masterToken = "access_token=3U9XCZRPLseYdhm4rUf7eztsqtcctLkX";
 
     return axios({
         method: 'post',
-        url: process.env.BASE_API + '/auth',
-        data: masterToken,
-        auth: {
-            username: username,
-            password: password
+        url: process.env.BASE_API + '/v1/login',
+        data: {
+            username:username,
+            password:password
         },
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        }
+        // auth: {
+        //     username: username,
+        //     password: password
+        // },
+        // headers: {
+        //     'Content-Type': 'application/x-www-form-urlencoded',
+        // }
     }).then(function (result) {
         return result
     }, error => {
